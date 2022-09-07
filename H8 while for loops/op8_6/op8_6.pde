@@ -5,6 +5,6 @@ background(255,255,255);
 
 for( int i=0; i<5; i++)
 {
- ellipse (100-cWaarde/2, 100 -cWaarde/2, cWaarde, cWaarde);
+ ellipse (300 - cWaarde/2, 200 + cWaarde/2, cWaarde, cWaarde);
  cWaarde -=10;
 }
