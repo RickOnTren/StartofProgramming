@@ -21,9 +21,10 @@ fill(0,0,0);
 text("Gewicht "+ gewicht + "kg",50,60);
 text("Leeftijd = "+ leeftijd,175,60);
 text("Lengte "+ lengte +"cm",270,60);
-text("BMI= "+ bmi,180,130);
+
 
 if(leeftijd < 70)
+
 {
 
   if(bmi <= 18.5){
@@ -57,3 +58,4 @@ else {
     fill(0,128,0);
   }
 }
+text("BMI= "+ bmi,180,130);
