@@ -8,6 +8,6 @@ for (int i=1; i <= 10; i++)
 {
  antwoord = tafel * i;
  fill(0,0,0);
- text( i + "*" + tafel+ " " + "=" +antwoord, i * 20 + 30, i * 20 + 30);
+ text( i + "*" + tafel+ " " + "=" +antwoord, i * 0 + 30, i * 20 + 30);
  
 }
