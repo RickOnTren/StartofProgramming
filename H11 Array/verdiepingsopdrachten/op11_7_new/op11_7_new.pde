@@ -38,13 +38,12 @@ void Toevoegen() {
   knopGeklikt++;
   
  
-  for(int i = 0; i < namen.length; i++){
-    if(9 > knopGeklikt){
-     text(namen[i],60,60);
-     
-    }
+ if(knopGeklikt == namen.length) {
+   for(int i = 0; i < namen.length; i++){
+     text(namen[i], 80, 90 + (10 * i));
    }
-  }
+ }
+}
   
   
   
