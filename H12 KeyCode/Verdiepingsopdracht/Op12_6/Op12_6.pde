@@ -3,10 +3,10 @@ int x;
 int y;
 
 void setup() {
- size(500,500);
+ size(600,600);
  
- x = 250;
- y = 250;
+ x = 300;
+ y = 300;
 }
 
 void draw() {
