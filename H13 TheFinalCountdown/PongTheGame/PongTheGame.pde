@@ -87,6 +87,7 @@ if (balletjeX <= 10 ) {
   balletjeX = 300;
   balletjeY = 300;
 }
+
 // zorgt ervoor de P2balk het doet en er af bounced
 if (balletjeX >= 515 && balletjeY > yP2 && balletjeY < (yP2 + 100)) {
   beweegBalRechts = false;
