@@ -3,6 +3,7 @@ PImage foto1;
 PImage foto2;
 
 void setup() {
+  background(255);
   size(600,600);
   foto = loadImage("Images/boyka.jpg");
   foto1 = loadImage("Images/creed.jpg");
@@ -10,6 +11,7 @@ void setup() {
 }
 
 void draw() {
+  tint(0,165,255);
   foto.resize(50,50);
   image(foto, 200, 300);
   
