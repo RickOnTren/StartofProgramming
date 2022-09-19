@@ -32,25 +32,25 @@ text = loadFont("ComicSansMS-Italic-30.vlw");
 }
 
 void draw() {
-  
+    // dit is wat je in het begin zit en ander zie je de gameplay
   if (schermen == 0) {
    startUpScherm(); 
-  } else if ( schermen == 1) {
+  } else  {
    gamePlay(); 
   }
 }
 
 void mousePressed() {
+  // hier gebeurt de switch als je er op klikt tussen de gameplay en het startscherm
   if ( schermen == 0) {
     schermen = 1;
    gamePlay(); 
   }
-  if (schermen == 2) {
-   startUpScherm(); 
-  }
+ 
 }
 
 void startUpScherm() {
+  // dit is alles wat in het start scherm staat
  background(0,165,255);
  textSize(80);
  text("Pong", 200, height / 2);
