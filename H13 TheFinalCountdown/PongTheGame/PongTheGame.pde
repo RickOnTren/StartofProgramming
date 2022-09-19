@@ -26,7 +26,6 @@ yP2 = 240;
 // laat de font in
 text = loadFont("ComicSansMS-Italic-30.vlw");  
 
-
 }
 
 void draw() {
@@ -34,7 +33,7 @@ void draw() {
   textFont (text); // roep de text aan
   
  // het balletje die gek tript
-  background(21, 205, 212); // achtergrond die constant refreshed
+  background(0,165,255); // achtergrond die constant refreshed
   fill(random(225),random(255),random(255)); // 
   ellipse(balletjeX, balletjeY, 30, 30);
   fill(14, 56, 125);
