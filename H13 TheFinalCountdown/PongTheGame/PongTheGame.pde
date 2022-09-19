@@ -12,6 +12,9 @@ boolean beweegBalBeneden = true;
 
 PFont text; // het maken van een font met processing
 
+// dit zorgt ervoor dat het automatisch start bij een start scherm
+int schermen = 0;
+
 // de score variabelen voor de witte en zwarte balk
 int p1Balk = 0;
 int p2Balk = 0;
@@ -30,7 +33,34 @@ text = loadFont("ComicSansMS-Italic-30.vlw");
 
 void draw() {
   
-  textFont (text); // roep de text aan
+  if (schermen == 0) {
+   startUpScherm(); 
+  } else if ( schermen == 1) {
+   gamePlay(); 
+  }
+}
+
+void mousePressed() {
+  if ( schermen == 0) {
+    schermen = 1;
+   gamePlay(); 
+  }
+  if (schermen == 2) {
+   startUpScherm(); 
+  }
+}
+
+void startUpScherm() {
+ background(0,165,255);
+ textSize(80);
+ text("Pong", 200, height / 2);
+ textSize(15);
+ text("klik om te beginnen", 220, 590);
+}
+
+
+void gamePlay() {
+   textFont (text); // roep de text aan
   
  // het balletje die gek tript
   background(0,165,255); // achtergrond die constant refreshed
@@ -95,7 +125,6 @@ if (balletjeX >= 515 && balletjeY > yP2 && balletjeY < (yP2 + 100)) {
 if (balletjeX <= 70 && balletjeY > yP1 && balletjeY < (yP1 + 100)) {
   beweegBalRechts = true;
 }
-
 }
 
 void keyPressed() {
