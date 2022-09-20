@@ -39,7 +39,7 @@ bgMusic = new SoundFile(this, "BGmusic/bgPongSong.mp3");
    bgMusic.rate(1); // de snelheid van de music
    bgMusic.amp(1); // hoe hard het volume staat
    bgMusic.loop(); // dat het achter elkaar afspeelt als de tijd verlopen is
-   bgMusic.play();
+   
 
 }
 
