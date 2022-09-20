@@ -34,10 +34,11 @@ yP2 = 240;
 // laat de font in
 text = loadFont("ComicSansMS-Italic-30.vlw"); 
 // het ophalen van de sound file
-bgMusic = new SoundFile(this, "BGmusic/backgroundMusic.mp3");
+bgMusic = new SoundFile(this, "BGmusic/bgPongSong.mp3");
  // het afspelen van de music
-   bgMusic.rate(1);
-   bgMusic.amp(1);
+   bgMusic.rate(1); // de snelheid van de music
+   bgMusic.amp(1); // hoe hard het volume staat
+   bgMusic.loop(); // dat het achter elkaar afspeelt als de tijd verlopen is
    bgMusic.play();
 
 }
