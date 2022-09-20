@@ -1,3 +1,8 @@
+import processing.sound.*;
+
+// variabelen voor de bg music
+SoundFile bgMusic;
+
 // variabelen voor de twee balken
 int yP1;
 int yP2;
@@ -27,7 +32,13 @@ size (600,600);
 yP1 = 240;  
 yP2 = 240;
 // laat de font in
-text = loadFont("ComicSansMS-Italic-30.vlw");  
+text = loadFont("ComicSansMS-Italic-30.vlw"); 
+// het ophalen van de sound file
+bgMusic = new SoundFile(this, "BGmusic/backgroundMusic.mp3");
+ // het afspelen van de music
+   bgMusic.rate(1);
+   bgMusic.amp(1);
+   bgMusic.play();
 
 }
 
@@ -36,7 +47,7 @@ void draw() {
   if (schermen == 0) {
    startUpScherm(); 
   } else  {
-   gamePlay(); 
+   pongTheGame(); 
   }
 }
 
@@ -44,7 +55,7 @@ void mousePressed() {
   // hier gebeurt de switch als je er op klikt tussen de gameplay en het startscherm
   if ( schermen == 0) {
     schermen = 1;
-   gamePlay(); 
+   pongTheGame(); 
   }
  
 }
@@ -59,17 +70,16 @@ void startUpScherm() {
 }
 
 
-void gamePlay() {
-   textFont (text); // roep de text aan
-  
- // het balletje die gek tript
+void pongTheGame() {
+   
+  textFont (text); // roep de text aan
+   
+   // het balletje die gek tript
   background(0,165,255); // achtergrond die constant refreshed
   fill(random(225),random(255),random(255)); // 
   ellipse(balletjeX, balletjeY, 30, 30);
-  fill(14, 56, 125);
-  text("Pong",270,40);
-  
- // de twee balken
+ 
+  // de twee balken
   fill(0); // kleur
   rect(50, yP1, 20, 90);
   text(p1Balk, 200, 40);
